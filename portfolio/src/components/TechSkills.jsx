@@ -1,0 +1,26 @@
+import React from "react";
+import "./TechSkills.css";
+
+const TechSkills = () => {
+  return (
+    <div className="tech-skills-container">
+      <h2 className="tech-skills-title">01 Software Skills</h2>
+      <div className="tech-skills-grid">
+        <div>JavaScript</div>
+        <div>Git</div>
+        <div>Yarn/Gulp/Webpack</div>
+        <div>Agile Methodologies</div>
+        <div>NodeJS</div>
+        <div>React</div>
+        <div>Design Systems</div>
+        <div>Serverless</div>
+        <div>CSS3/Sass</div>
+        <div>HTML5</div>
+        <div>Grid/Flex</div>
+        <div>SQL Server</div>
+      </div>
+    </div>
+  );
+};
+
+export default TechSkills;

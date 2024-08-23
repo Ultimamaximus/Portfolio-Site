@@ -1,0 +1,26 @@
+/* TechSkills.css */
+.tech-skills-container {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .tech-skills-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .tech-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /* Adjust the gap between items */
+  }
+  
+  .tech-skills-grid div {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  
