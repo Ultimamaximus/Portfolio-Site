@@ -1,0 +1,45 @@
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 850px; 
+    padding: 20px;
+    color: #fff;
+}
+
+.about-me-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation-duration: 1.2s; /* Ensure 's' is added for seconds */
+}
+
+.about-me-paragraph {
+    font-size: 1.8em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    text-align: center;
+    animation-duration: 1.2s; /* Slow down the animation */
+}
+
+.about-me-photo {
+    max-width: 130%; /* Prevent the image from overflowing */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    filter: contrast(1.05);
+    animation: revealFromTop 2.5s ease forwards, animate__fadeIn 2.5s ease forwards;
+    /* Slower animation for the image reveal and fade-in */
+}
+
+@keyframes revealFromTop {
+  0% {
+    clip-path: inset(0 0 100% 0); /* Start with the image hidden from the top */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Fully reveal the image */
+  }
+}
