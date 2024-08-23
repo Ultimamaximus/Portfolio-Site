@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import "./WorkSection.css";
+import "../styles/WorkSection.css"
 import Project from "./Project";
-import projectImage1 from "../Images/project-image1.png";
-import projectImage2 from "../Images/project-image2.png";
-import projectImage3 from "../Images/project-image3.png";
-import projectImage4 from "../Images/project-image4.png";
+import projectImage1 from "../images/project-image1.png";
+import projectImage2 from "../images/project-image2.png";
+import projectImage3 from "../images/project-image3.png";
+import projectImage4 from "../images/project-image4.png";
 
 const WorkSection = () => {
   const containerRef = useRef(null);

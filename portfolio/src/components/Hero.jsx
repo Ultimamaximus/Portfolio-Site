@@ -1,7 +1,7 @@
 import React from 'react';
-import './Hero.css';
+import "../styles/Hero.css"
 import 'animate.css';
-import heroImage from '../Images/test-img.webp'; 
+import heroImage from '../images/test-img.webp'; 
 
 const Hero = () => {
     return (

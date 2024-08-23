@@ -1,6 +1,6 @@
 import React from 'react';
 import 'animate.css';
-import './NavBar.css'; 
+import "../styles/NavBar.css"
 
 const NavBar = () => {
     return (

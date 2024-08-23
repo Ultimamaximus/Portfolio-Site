@@ -1,7 +1,7 @@
 import React from "react";
 import "animate.css";
-import "./AboutMe.css";
-import aboutMePhoto from "../Images/laptop.jpg";
+import "../styles/AboutMe.css"
+import aboutMePhoto from "../images/laptop.jpg";
 
 const AboutMe = () => {
   return (
