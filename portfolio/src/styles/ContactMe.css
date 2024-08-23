@@ -1,0 +1,77 @@
+/* ContactMe.css */
+.contact-me-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+.contact-text {
+    flex: 0.8;
+    margin-right: 50px;
+    animation-duration: 2s; /* Slow down the animation */
+}
+
+.contact-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.contact-form {
+    flex: 1;
+    animation-duration: .8s; /* Slow down the animation */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #000;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.submit-button {
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #000;
+    color: #fff;
+    width: 23%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+
+.submit-button:hover {
+    background-color: #333;
+}
+
+.submit-button .arrow {
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.submit-button:hover .arrow {
+    transform: translateX(5px);
+}
