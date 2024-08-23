@@ -1,0 +1,43 @@
+.hero-container {
+    position: relative; /* Create a positioning context for the image */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    height: 80vh; /* Full viewport height */
+    display: flex;
+    justify-content: left; /* Align content to the left */
+    align-items: flex-end; /* Center content vertically */
+    text-align: left; /* Align text to the left */
+    padding-left: 5rem; /* Add some padding on the left */
+  }
+  
+  .text-container {
+    display: inline-block;
+    position: relative; /* Ensure text is above the image */
+    margin-bottom: 50px;
+    z-index: 1; /* Bring text in front of the image */
+  }
+  
+  .title {
+    font-size: 2.5rem; /* Adjust to match the smaller text */
+    margin: 0; /* Remove default margin */
+    margin-left: -2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2; /* Adjust line height for proper spacing */
+  }
+  
+  .subtitle {
+    font-size: 8.5rem; /* Larger text size for the name */
+    font-weight: bold; /* Bold style */
+    margin: 0; /* Remove default margin */
+    line-height: 1.2; /* Ensure consistent spacing */
+  }
+  
+  .hero-image {
+    position: absolute; /* Position the image absolutely within the container */
+    margin-right: 100px;
+    right: 0; /* Align the image to the right */
+    bottom: 0; /* Align the image to the bottom */
+    height: 100%; /* Make the image fill the height of the container */
+    z-index: 1; /* Place the image behind the text */
+    opacity: 0.7; /* Optional: Lower the opacity for a subtle effect */
+  }
