@@ -1,0 +1,50 @@
+/* General styles for the navbar */
+.navbar {
+    background-color: #000; 
+    display: flex;
+    justify-content: space-between;
+    animation-duration: 1s; /* Duration of the animation */
+    animation-delay: .2s; /* 2-second delay before animation starts */
+    align-items: center;
+    padding: 10px 20px; 
+    color: #fff;
+  }
+  
+  /* Logo container styling */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container h2 {
+    border: 2px solid #fff; 
+    padding: 10px 20px; 
+    border-radius: 30px; 
+    display: flex;
+    align-items: center;
+    font-size: 18px; 
+    font-weight: 400;
+    position: relative; 
+  }
+  
+  /* Navigation list styling */
+  .nav-list {
+    list-style-type: none; 
+    display: flex; /* Align items in a row */
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .nav-link {
+    margin: 0 4vw; /* Space between navigation items */
+    background-color: #000;
+    border: none;
+    color: #fff; 
+    font-size: 16px; 
+    cursor: pointer; 
+  }
+  
+  .nav-link:hover {
+    color: #ccc; 
+  }
+  
