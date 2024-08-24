@@ -1,15 +1,43 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "animate.css";
-import "../styles/AboutMe.css"
+import "../styles/AboutMe.css";
 import aboutMePhoto from "../images/laptop.jpg";
 
 const AboutMe = () => {
+  const aboutMeRef = useRef(null);
+
+  useEffect(() => {
+    const aboutMeSection = aboutMeRef.current;
+    const options = {
+      threshold: .1, // Trigger as soon as any part of the element is in view
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate__animated", "animate__fadeInUp");
+        } else {
+          entry.target.classList.remove("animate__animated", "animate__fadeInUp");
+        }
+      });
+    }, options);
+
+    const elementsToAnimate = aboutMeSection.querySelectorAll(".animate-on-scroll");
+    elementsToAnimate.forEach((el) => observer.observe(el));
+
+    return () => {
+      if (elementsToAnimate.length > 0) {
+        elementsToAnimate.forEach((el) => observer.unobserve(el));
+      }
+    };
+  }, []);
+
   return (
-    <div className="about-me-container">
-      <h2 className="about-me-title animate__animated animate__fadeInUp">
+    <div className="about-me-container" ref={aboutMeRef}>
+      <h2 className="about-me-title animate-on-scroll">
         About Me
       </h2>
-      <p className="about-me-paragraph animate__animated animate__fadeInUp">
+      <p className="about-me-paragraph animate-on-scroll">
         I have been working for the past 4 years with JavaScript, and for the
         last couple of years, I’ve been writing and refactoring code while
         connecting RESTful APIs using <span>React</span> and
@@ -21,7 +49,7 @@ const AboutMe = () => {
       <img
         src={aboutMePhoto}
         alt="About Me"
-        className="about-me-photo animate__animated animate__fadeIn"
+        className="about-me-photo animate-on-scroll"
       />
     </div>
   );
