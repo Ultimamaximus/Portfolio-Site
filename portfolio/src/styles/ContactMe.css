@@ -27,7 +27,7 @@
 .contact-form {
     flex: 1;
     opacity: 0; /* Start invisible */
-    animation-duration: 0.8s; /* Slow down the animation */
+    animation-duration: -1s; /* Slow down the animation */
     animation-fill-mode: forwards; /* Keep the final state of the animation */
 }
 
