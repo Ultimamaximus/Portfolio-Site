@@ -1,24 +1,31 @@
-.work-section-container {
+/* Centering pagination dots */
+.splide__pagination {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden; 
-    scroll-behavior: smooth;
+    justify-content: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+/* Adjusting individual pagination dot size */
+.splide__pagination__page {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px; /* Adjust spacing between dots */
+}
+
+/* Splide container adjustments */
+.work-section-container {
     padding: 20px;
-    gap: 20px;
     position: relative;
     width: 100%;
 }
 
-.work-section-title {
-    color: #fff;
-    font-size: 2em;
-    font-weight: bold;
-    padding-left: 20px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
+/* Project component styling */
+.project-component {
+    width: 95%; /* Adjusting to make projects take up less space */
+    margin: 0 auto; /* Center the project component horizontally */
 }
 
-.project-component {
-    flex: 0 0 auto;
-    width: 50%;
+/* Ensure gap between projects is smaller */
+.splide__slide {
+    margin-right: 10px !important; /* Reducing gap between slides */
 }
