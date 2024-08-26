@@ -46,7 +46,7 @@ const ContactMe = () => {
         <form>
           <input type="text" placeholder="Your name here" />
           <input type="email" placeholder="Your email here" />
-          <textarea placeholder="Resume it in a few words"></textarea>
+          <textarea placeholder="Tell me about it"></textarea>
           <button type="submit" className="submit-button">
             Let's talk <span className="arrow">→</span>
           </button>
