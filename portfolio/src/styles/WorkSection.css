@@ -16,18 +16,12 @@
 .work-section-container {
     padding: 20px;
     position: relative;
-    width: 100%;
+    width: 95%;
 }
 
 /* Project component styling */
 .project-component {
-    width: 95%; /* Adjusting to make projects take up less space */
     margin: 0 auto; /* Center the project component horizontally */
-}
-
-/* Ensure gap between projects is smaller */
-.splide__slide {
-    margin-right: 10px !important; /* Reducing gap between slides */
 }
 
 .work-section-title {
@@ -53,7 +47,8 @@
     }
   
     .work-section-container {
-      padding: 15px; /* Reduce padding for smaller screens */
+      padding: 15px; 
+      width: 98%
     }
   
     .project-component {

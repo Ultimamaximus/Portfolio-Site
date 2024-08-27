@@ -24,15 +24,15 @@
 .project-circle {
     position: absolute;
     top: 20px;
-    right: -155px;
-    width: 120px;
-    height: 120px;
+    right: -140px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     border: 2px solid #af6de6;
 }
@@ -71,12 +71,6 @@
         padding: 15px;
     }
 
-    .project-circle {
-        right: -100px; /* Further adjust the position on very small screens */
-        width: 80px; /* Further adjust size */
-        height: 80px; /* Further adjust size */
-    }
-
     .project-title {
         font-size: 18px; /* Further reduce font size */
     }
@@ -90,9 +84,13 @@
     }
 
     .project-circle {
-        right: -65px; /* Adjust the position */
-        font-size: 12px;
-        width: 50px;  /* Reduce size */
-        height: 50px; /* Reduce size */
+        right: -60px; /* Adjust the position */
+        font-size: 10px;
+        width: 45px;  /* Reduce size */
+        height: 45px; /* Reduce size */
     }
+}
+
+.project-circle-link {
+    color: inherit; /* Inherit the color from the parent element*/
 }

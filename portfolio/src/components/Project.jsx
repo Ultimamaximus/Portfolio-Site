@@ -6,11 +6,11 @@ const Project = ({ image, title, summary, link }) => {
     <div className="project-component">
       <div className="project-image-container">
         <img src={image} alt={title} className="project-image" />
-        <div className="project-circle">
-          <a href={link} target="_blank" rel="noopener noreferrer">
+        <a href={link} target="_blank" rel="noopener noreferrer" className="project-circle-link">
+          <div className="project-circle">
             See It Live
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
       <div className="project-details">
         <h2 className="project-title">{title}</h2>

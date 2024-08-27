@@ -1,57 +1,56 @@
 /* TechSkills.css */
 .tech-skills-container {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    margin-left: 2%;
-  }
-  
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  margin-left: 2%;
+}
+
+.tech-skills-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.tech-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Adjust the gap between items */
+}
+
+.tech-skills-grid div {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
   .tech-skills-title {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-  
-  .tech-skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; /* Adjust the gap between items */
-  }
-  
-  .tech-skills-grid div {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1.5em; /* Decrease font size for smaller screens */
   }
 
-  @media (max-width: 768px) {
-    .tech-skills-title {
-      font-size: 1.5em; /* Decrease font size for smaller screens */
-    }
-  
-    .tech-skills-grid {
-      grid-template-columns: repeat(2, 1fr); /* Reduce columns to 2 on tablets */
-      gap: 15px; /* Adjust gap for smaller screens */
-    }
-  
-    .tech-skills-grid div {
-      font-size: 1.1em; /* Slightly reduce font size for smaller screens */
-    }
+  .tech-skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Reduce columns to 2 on tablets */
+    gap: 15px; /* Adjust gap for smaller screens */
   }
-  
-  @media (max-width: 480px) {
-    .tech-skills-title {
-      font-size: 1.2em; /* Further decrease font size for very small screens */
-    }
-  
-    .tech-skills-grid {
-      grid-template-columns: 1fr; /* Stack items in a single column on phones */
-      gap: 10px; /* Reduce gap for smaller screens */
-    }
-  
-    .tech-skills-grid div {
-      font-size: 1em; /* Further reduce font size for very small screens */
-    }
+
+  .tech-skills-grid div {
+    font-size: 1.1em; /* Slightly reduce font size for smaller screens */
   }
-  
-  
+}
+
+@media (max-width: 480px) {
+  .tech-skills-title {
+    font-size: 1.2em; /* Further decrease font size for very small screens */
+  }
+
+  .tech-skills-grid {
+    grid-template-columns: 1fr; /* Stack items in a single column on phones */
+    gap: 10px; /* Reduce gap for smaller screens */
+  }
+
+  .tech-skills-grid div {
+    font-size: 1em; /* Further reduce font size for very small screens */
+  }
+}
+

@@ -1,3 +1,10 @@
+/* Remove default focus outline */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.submit-button:focus {
+    outline: none;
+}
+
 .contact-me-container {
     display: flex;
     justify-content: space-between;
