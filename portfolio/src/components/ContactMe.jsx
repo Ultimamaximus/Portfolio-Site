@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
+import emailjs from "emailjs-com";
 import "animate.css"; // Importing animate.css
-import "../styles/ContactMe.css"
+import "../styles/ContactMe.css";
 
 const ContactMe = () => {
   const contactMeRef = useRef(null);
@@ -16,12 +17,16 @@ const ContactMe = () => {
         if (entry.isIntersecting) {
           entry.target.classList.add("animate__animated", "animate__fadeInUp");
         } else {
-          entry.target.classList.remove("animate__animated", "animate__fadeInUp");
+          entry.target.classList.remove(
+            "animate__animated",
+            "animate__fadeInUp"
+          );
         }
       });
     }, options);
 
-    const elementsToAnimate = contactMeSection.querySelectorAll(".animate-on-scroll");
+    const elementsToAnimate =
+      contactMeSection.querySelectorAll(".animate-on-scroll");
     elementsToAnimate.forEach((el) => observer.observe(el));
 
     return () => {
@@ -30,6 +35,23 @@ const ContactMe = () => {
       }
     };
   }, []);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_cqdm3nu", "template_2d0nk5d", e.target, "pwY3OFZ5EZuv0fEp2")
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send the message, please try again.");
+        }
+      );
+  };
 
   return (
     <div className="contact-me-container" ref={contactMeRef}>
@@ -43,10 +65,24 @@ const ContactMe = () => {
         </p>
       </div>
       <div className="contact-form animate-on-scroll">
-        <form>
-          <input type="text" placeholder="Your name here" />
-          <input type="email" placeholder="Your email here" />
-          <textarea placeholder="Tell me about it"></textarea>
+        <form onSubmit={sendEmail}>
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Your name here"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email here"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Tell me about it"
+            required
+          ></textarea>
           <button type="submit" className="submit-button">
             Let's talk <span className="arrow">→</span>
           </button>
