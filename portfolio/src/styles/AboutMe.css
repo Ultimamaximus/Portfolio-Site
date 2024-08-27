@@ -54,3 +54,35 @@ animation: revealFromTop 2s ease-in-out forwards; /* Faster reveal with snappier
   clip-path: inset(0 0 0 0); /* Fully reveal the image */
 }
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-me-title {
+    font-size: 2em; /* Decrease font size for smaller screens */
+  }
+
+  .about-me-paragraph {
+    font-size: 1.2em; /* Decrease font size for readability on phones */
+    line-height: 1.4; /* Adjust line-height for better spacing */
+  }
+
+  .about-me-photo {
+    max-width: 100%; /* Ensure image fits within the screen width */
+    margin-top: 10px; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me-title {
+    font-size: 1.5em; /* Further decrease font size for very small screens */
+  }
+
+  .about-me-paragraph {
+    font-size: 1em; /* Further decrease font size for very small screens */
+  }
+
+  .about-me-photo {
+    max-width: 120%; /* Ensure image fits within the screen width */
+    margin-top: 10px; /* Adjust margin for smaller screens */
+  }
+}

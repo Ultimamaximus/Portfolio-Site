@@ -87,3 +87,43 @@
 .animate__animated.animate__fadeInUp {
   opacity: 1 !important; /* Ensure opacity is set to 1 when animation starts */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-me-container {
+      flex-direction: column;
+      padding: 30px 20px; /* Adjust padding for smaller screens */
+    }
+  
+    .contact-text {
+      margin-bottom: 20px; /* Space between text and form */
+    }
+  
+    .submit-button {
+      width: 100%; /* Full width button on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-text h2 {
+      font-size: 1.5em; /* Smaller font size for headings */
+    }
+  
+    .contact-text p {
+      font-size: 1em; /* Smaller font size for paragraphs */
+    }
+  
+    .submit-button {
+      font-size: 16px; /* Smaller font size for the button */
+    }
+  }
+  
+  /* Ensure elements are invisible initially for animation */
+  .animate-on-scroll {
+    opacity: 0;
+  }
+  
+  .animate__animated.animate__fadeInUp {
+    opacity: 1 !important;
+  }
+  

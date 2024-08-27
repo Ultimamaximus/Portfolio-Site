@@ -22,6 +22,12 @@ const WorkSection = () => {
           pagination: true,
           arrows: false,
           pauseOnHover: true,
+          breakpoints: {
+            768: {
+              perPage: 1, // Show one project per view on screens smaller than 768px
+              gap: '5px', // Adjust gap between slides for smaller screens
+            },
+          },
         }}
         className="work-section-container"
       >

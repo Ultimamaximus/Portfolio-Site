@@ -38,3 +38,42 @@
     margin-bottom: -10px;
     text-transform: uppercase;
   }
+
+  /* Responsive Styles */
+@media (max-width: 768px) {
+    .work-section-title {
+      font-size: 1.5em; /* Adjust title font size for smaller screens */
+      margin-left: 5%;
+      text-align: center; /* Center the title on smaller screens */
+    }
+  
+    .splide__pagination__page {
+      width: 10px; /* Slightly smaller pagination dots */
+      height: 10px;
+    }
+  
+    .work-section-container {
+      padding: 15px; /* Reduce padding for smaller screens */
+    }
+  
+    .project-component {
+      width: 90%; /* Make project components take up more space */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .work-section-title {
+      font-size: 1.2em; /* Further adjust title font size for very small screens */
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .project-component {
+      width: 100%; /* Use full width for project components on very small screens */
+    }
+  
+    .splide__pagination__page {
+      width: 8px; /* Further reduce pagination dot size */
+      height: 8px;
+    }
+  }

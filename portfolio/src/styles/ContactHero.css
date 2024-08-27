@@ -21,4 +21,24 @@
     font-size: 3em; 
     display: inline-block;
   }
+
+  /* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-hero-heading {
+    font-size: 2em; /* Decrease font size for smaller screens */
+  }
+
+  .gradient-text {
+    font-size: 2em; /* Decrease font size for the gradient text as well */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero-heading {
+    font-size: 1.8em; /* Further decrease font size for very small screens */
+  }
+
+  .gradient-text {
+    font-size: 2.5em;  }
+}
   

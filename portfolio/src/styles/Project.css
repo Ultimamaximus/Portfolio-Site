@@ -65,3 +65,34 @@
 .project-location span {
     color: #fff;
 }
+
+@media (max-width: 480px) {
+    .project-component {
+        padding: 15px;
+    }
+
+    .project-circle {
+        right: -100px; /* Further adjust the position on very small screens */
+        width: 80px; /* Further adjust size */
+        height: 80px; /* Further adjust size */
+    }
+
+    .project-title {
+        font-size: 18px; /* Further reduce font size */
+    }
+
+    .project-summary {
+        font-size: 14px; /* Keep font size but adjust padding/margin */
+    }
+
+    .project-image {
+        max-width: 250px; /* Apply max-width only for smaller screens */
+    }
+
+    .project-circle {
+        right: -65px; /* Adjust the position */
+        font-size: 12px;
+        width: 50px;  /* Reduce size */
+        height: 50px; /* Reduce size */
+    }
+}
