@@ -3,13 +3,13 @@ import "animate.css";
 import "../styles/AboutMe.css";
 import aboutMePhoto from "../images/laptop.jpg";
 
-const AboutMe = () => {
+const AboutMe = ({ id }) => {  // Accept id as a prop
   const aboutMeRef = useRef(null);
 
   useEffect(() => {
     const aboutMeSection = aboutMeRef.current;
     const options = {
-      threshold: .1, // Trigger as soon as any part of the element is in view
+      threshold: 0.1, // Trigger as soon as any part of the element is in view
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -33,7 +33,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div className="about-me-container" ref={aboutMeRef}>
+    <div className="about-me-container" id={id} ref={aboutMeRef}> {/* Apply the id here */}
       <h2 className="about-me-title animate-on-scroll">
         About Me
       </h2>

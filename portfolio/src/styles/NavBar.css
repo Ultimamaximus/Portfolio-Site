@@ -1,50 +1,106 @@
 /* General styles for the navbar */
 .navbar {
-    background-color: #000; 
-    display: flex;
-    justify-content: space-between;
-    animation-duration: 1s; /* Duration of the animation */
-    animation-delay: .2s; /* 2-second delay before animation starts */
-    align-items: center;
-    padding: 10px 20px; 
-    color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  position: relative; /* Position for menu toggle button */
+}
+
+/* Logo container styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container h2 {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Navigation list styling */
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.nav-link {
+  margin: 0 4vw;
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .navbar {
+    z-index: 110;
   }
-  
-  /* Logo container styling */
+
   .logo-container {
-    display: flex;
-    align-items: center;
+    padding-right: 10px; /* Adjust space between logo and hamburger */
   }
-  
-  .logo-container h2 {
-    border: 2px solid #fff; 
-    padding: 10px 20px; 
-    border-radius: 30px; 
-    display: flex;
-    align-items: center;
-    font-size: 18px; 
-    font-weight: 400;
-    position: relative; 
-  }
-  
-  /* Navigation list styling */
-  .nav-list {
-    list-style-type: none; 
-    display: flex; /* Align items in a row */
-    margin: 0; 
-    padding: 0; 
-  }
-  
-  .nav-link {
-    margin: 0 4vw; /* Space between navigation items */
-    background-color: #000;
+
+  .menu-toggle {
+    display: block;
+    background: none;
     border: none;
-    color: #fff; 
-    font-size: 16px; 
-    cursor: pointer; 
+    color: #fff;
+    font-size: 34px;
+    cursor: pointer;
+    padding-bottom: 10px; /* Maintain spacing below the hamburger */
+    margin-right: 10px; /* Adjust right margin to keep away from nav options */
   }
-  
-  .nav-link:hover {
-    color: #ccc; 
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 100px; /* Increased to prevent cutting into the logo/hamburger */
+    right: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
   }
-  
+
+  .nav-list.nav-list-open {
+    display: flex;
+    max-height: none; /* Allow the list to expand fully */
+    height: auto; /* Let height adjust based on content */
+  }
+
+  .nav-item {
+    padding: 10px 20px;
+    border-top: 1px solid #333;
+  }
+}
+
+/* Hide the menu toggle on larger screens */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}

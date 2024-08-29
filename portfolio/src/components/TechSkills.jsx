@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/TechSkills.css"
 
-const TechSkills = () => {
+const TechSkills = ({ id }) => {
   return (
-    <div className="tech-skills-container">
+    <div className="tech-skills-container" id={id}>
       <h2 className="tech-skills-title">01 Software Skills</h2>
       <div className="tech-skills-grid">
         <div>JavaScript</div>
