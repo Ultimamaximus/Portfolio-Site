@@ -26,13 +26,15 @@
   font-weight: 400;
 }
 
-/* Navigation list styling */
+/* Navigation list styling for larger screens */
 .nav-list {
   list-style-type: none;
-  display: flex;
+  display: flex; /* Ensure nav items are shown on larger screens */
   margin: 0;
   padding: 0;
-  transition: max-height 0.3s ease-in-out;
+  opacity: 1; /* Make the nav visible */
+  max-height: none; /* Ensure height is unrestricted */
+  transition: none; /* Remove transition effects on larger screens */
 }
 
 .nav-link {
@@ -50,7 +52,6 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
-
   .navbar {
     z-index: 110;
   }
@@ -60,7 +61,7 @@
   }
 
   .menu-toggle {
-    display: block;
+    display: block; /* Ensure the burger menu is visible on mobile */
     background: none;
     border: none;
     color: #fff;
@@ -71,7 +72,6 @@
   }
 
   .nav-list {
-    display: none;
     flex-direction: column;
     background-color: #000;
     position: absolute;
@@ -79,13 +79,14 @@
     right: 0;
     width: 100%;
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Smooth out the transitions */
   }
 
   .nav-list.nav-list-open {
-    display: flex;
-    max-height: none; /* Allow the list to expand fully */
+    max-height: 300px; /* Adjust based on your content's approximate height */
+    opacity: 1; /* Fully visible */
     height: auto; /* Let height adjust based on content */
   }
 
@@ -93,15 +94,23 @@
     padding: 10px 20px;
     border-top: 1px solid #333;
   }
+
+  /* Hidden class for mobile animations */
+  .hidden {
+    max-height: 0 !important;
+    opacity: 0 !important;
+  }
 }
 
 /* Hide the menu toggle on larger screens */
-.menu-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .menu-toggle {
-    display: block;
+    display: none; /* Hide burger menu on larger screens */
+  }
+
+  .hidden {
+    opacity: 1 !important; /* Ensure nav is visible on larger screens */
+    max-height: none !important; /* No restriction on height */
   }
 }
+
