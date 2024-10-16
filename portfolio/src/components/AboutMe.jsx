@@ -3,6 +3,19 @@ import "../styles/AboutMe.css";
 import aboutMePhoto from "../images/DevArt.jpeg"; // Replace this with your actual image
 
 const AboutMe = ({ id }) => {
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offset = -100;  // Adjust this offset if needed for "Contact" section
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: sectionTop - offset,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="about-me-section" id={id}>
       <div className="about-me-image-container">
@@ -19,7 +32,11 @@ const AboutMe = ({ id }) => {
           or refining an existing platform, my goal is to turn your digital
           vision into reality.
         </p>
-        <button className="about-me-button">
+        {/* Button to scroll to the "Contact" section */}
+        <button
+          className="about-me-button"
+          onClick={() => scrollToSection("contact")}  // Scroll to the "Contact" section
+        >
           Let's talk <span className="arrow">→</span>
         </button>
       </div>
