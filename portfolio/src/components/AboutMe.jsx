@@ -1,56 +1,28 @@
-import React, { useEffect, useRef } from "react";
-import "animate.css";
+import React from "react";
 import "../styles/AboutMe.css";
-import aboutMePhoto from "../images/laptop.jpg";
+import aboutMePhoto from "../images/DevArt.jpeg"; // Replace this with your actual image
 
-const AboutMe = ({ id }) => {  // Accept id as a prop
-  const aboutMeRef = useRef(null);
-
-  useEffect(() => {
-    const aboutMeSection = aboutMeRef.current;
-    const options = {
-      threshold: 0.1, // Trigger as soon as any part of the element is in view
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate__animated", "animate__fadeInUp");
-        } else {
-          entry.target.classList.remove("animate__animated", "animate__fadeInUp");
-        }
-      });
-    }, options);
-
-    const elementsToAnimate = aboutMeSection.querySelectorAll(".animate-on-scroll");
-    elementsToAnimate.forEach((el) => observer.observe(el));
-
-    return () => {
-      if (elementsToAnimate.length > 0) {
-        elementsToAnimate.forEach((el) => observer.unobserve(el));
-      }
-    };
-  }, []);
-
+const AboutMe = ({ id }) => {
   return (
-    <div className="about-me-container" id={id} ref={aboutMeRef}> {/* Apply the id here */}
-      <h2 className="about-me-title animate-on-scroll">
-        About Me
-      </h2>
-      <p className="about-me-paragraph animate-on-scroll">
-        I have been working for the past 4 years with JavaScript, and for the
-        last couple of years, I’ve been writing and refactoring code while
-        connecting RESTful APIs using <span>React</span> and
-        <span> TypeScript</span>. I’m committed to delivering clean, structured,
-        and highly interactive experiences that elevate your online presence.
-        Whether you're launching a new venture or refining an existing platform,
-        my goal is to turn your digital vision into reality.
-      </p>
-      <img
-        src={aboutMePhoto}
-        alt="About Me"
-        className="about-me-photo animate-on-scroll"
-      />
+    <div className="about-me-section" id={id}>
+      <div className="about-me-image-container">
+        <img src={aboutMePhoto} alt="About Me" className="about-me-photo" />
+      </div>
+      <div className="about-me-content">
+        <h2 className="about-me-title">My Journey So Far</h2>
+        <p className="about-me-paragraph">
+          I have been working for the past 4 years with JavaScript, and for the
+          last couple of years, I’ve been writing and refactoring code while
+          connecting RESTful APIs using React and TypeScript. I’m committed to
+          delivering clean, structured, and highly interactive experiences that
+          elevate your online presence. Whether you're launching a new venture
+          or refining an existing platform, my goal is to turn your digital
+          vision into reality.
+        </p>
+        <button className="about-me-button">
+          Let's talk <span className="arrow">→</span>
+        </button>
+      </div>
     </div>
   );
 };

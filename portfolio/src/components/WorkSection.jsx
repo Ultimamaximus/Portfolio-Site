@@ -16,7 +16,7 @@ const WorkSection = () => {
         options={{
           type: 'loop',
           autoplay: true,
-          interval: 5000, // Adjust the interval between slides
+          interval: 4000, // Adjust the interval between slides
           perPage: 2, // Adjust how many slides to show per view
           gap: '10px', // Gap between slides
           pagination: true,

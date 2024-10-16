@@ -37,7 +37,7 @@
     margin-right: 35px;
     right: 0; /* Align the image to the right */
     bottom: 0; /* Align the image to the bottom */
-    height: 110%; /* Make the image fill the height of the container */
+    height: 105%; /* Make the image fill the height of the container */
     z-index: 1; /* Place the image behind the text */
     opacity: 0.7; /* Optional: Lower the opacity for a subtle effect */
   }

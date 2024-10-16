@@ -35,12 +35,24 @@ const NavBar = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const offset = -30;
+      let offset = 0;  // Default offset
+  
+      // Adjust the offset based on the section
+      if (sectionId === "work") {
+        offset = -340;  // Adjust this number for how far down you want to scroll for the 'Projects' section
+      } else if (sectionId === "contact") {
+        offset = -140;  // Adjust this number for how far down you want to scroll for the 'Contact' section
+      } else {
+        offset = -30;   // Default offset for other sections like 'About'
+      }
+  
       const sectionTop = section.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: sectionTop - offset,
         behavior: "smooth",
       });
+  
+      // Close the menu after scrolling
       setIsAnimating(true);
       navListRef.current.classList.add("animate__animated", "animate__fadeOutUp");
     }
@@ -72,7 +84,7 @@ const NavBar = () => {
         </li>
         <li className="nav-item">
           <button className="nav-link" onClick={() => scrollToSection("work")}>
-            Work
+            Projects
           </button>
         </li>
         <li className="nav-item">

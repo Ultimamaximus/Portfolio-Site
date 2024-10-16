@@ -9,6 +9,7 @@
   padding: 10px 20px;
   color: #fff;
   position: relative; /* Position for menu toggle button */
+  z-index: 2;
 }
 
 /* Logo container styling */
@@ -39,15 +40,19 @@
 
 .nav-link {
   margin: 0 4vw;
+  padding: 5px;
   background-color: #000;
-  border: none;
+  border: 2px solid transparent; /* Set an initial transparent border */
+  border-radius: 30px;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
+  box-sizing: border-box; /* Include border in the element's size */
 }
 
 .nav-link:hover {
   color: #ccc;
+  border-color: #fff; /* Change border color on hover */
 }
 
 /* Responsive styles */
