@@ -39,15 +39,18 @@
 }
 
 .nav-link {
-  margin: 0 4vw;
-  padding: 5px;
+  display: inline-block; /* Ensure links are treated as blocks to apply width */
+  min-width: 100px; /* Set a minimum width for consistency */
+  padding: 8px;
+  margin: 0 2vw; 
   background-color: #000;
-  border: 2px solid transparent; /* Set an initial transparent border */
+  border: 2px solid transparent;
   border-radius: 30px;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  box-sizing: border-box; /* Include border in the element's size */
+  text-align: center; /* Center the text */
+  box-sizing: border-box; /* Include padding and border in the total width */
 }
 
 .nav-link:hover {

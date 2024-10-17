@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
-import "animate.css"; // Importing animate.css
+import "animate.css";
 import "../styles/ContactMe.css";
 
 const ContactMe = () => {
@@ -8,25 +8,19 @@ const ContactMe = () => {
 
   useEffect(() => {
     const contactMeSection = contactMeRef.current;
-    const options = {
-      threshold: 0.1, // Trigger as soon as any part of the element is in view
-    };
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate__animated", "animate__fadeInUp");
+            observer.unobserve(entry.target); // Unobserve after animation triggers
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate__animated", "animate__fadeInUp");
-        } else {
-          entry.target.classList.remove(
-            "animate__animated",
-            "animate__fadeInUp"
-          );
-        }
-      });
-    }, options);
-
-    const elementsToAnimate =
-      contactMeSection.querySelectorAll(".animate-on-scroll");
+    const elementsToAnimate = contactMeSection.querySelectorAll(".animate-on-scroll");
     elementsToAnimate.forEach((el) => observer.observe(el));
 
     return () => {
@@ -38,7 +32,6 @@ const ContactMe = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm("service_cqdm3nu", "template_2d0nk5d", e.target, "pwY3OFZ5EZuv0fEp2")
       .then(
@@ -60,8 +53,7 @@ const ContactMe = () => {
           Whether you're looking to build from the ground up or enhance an
           existing project, I'm here to transform your ideas into polished
           digital experiences. Let’s collaborate to push the boundaries of your
-          code and achieve outstanding results. Don’t settle for ordinary—unlock
-          the full potential of your project with my expertise.
+          code and achieve outstanding results.
         </p>
       </div>
       <div className="contact-form animate-on-scroll">
